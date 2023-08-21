@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json.schemastore.org/eslintrc",
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:@typescript-eslint/stylistic",
+    "plugin:@typescript-eslint/stylistic-type-checked",
+    "plugin:astro/recommended",
+    "plugin:tailwindcss/recommended",
+    "prettier"
+  ],
+  "overrides": [
+    {
+      "files": ["*.astro"],
+      "parser": "astro-eslint-parser",
+      "parserOptions": {
+        "parser": "@typescript-eslint/parser",
+        "extraFileExtensions": [".astro"]
+      }
+    }
+  ],
+  "plugins": ["@typescript-eslint", "react", "tailwindcss", "filenames"],
+  "ignorePatterns": [],
+  "rules": {
+    "tailwindcss/classnames-order": "error",
+    "filenames/match-regex": ["error", "^[a-z0-9]+(-[a-z0-9]+)*(.test|.mock|.config|.d)?$"],
+    "no-extra-semi": "off",
+    "@typescript-eslint/no-extra-semi": "error",
+    "@typescript-eslint/no-non-null-assertion": "warn",
+    "no-empty-function": "off",
+    "@typescript-eslint/no-empty-function": "error",
+    "@typescript-eslint/adjacent-overload-signatures": "error",
+    "@typescript-eslint/no-empty-interface": "error",
+    "@typescript-eslint/no-inferrable-types": "error",
+    "@typescript-eslint/prefer-namespace-keyword": "error",
+    "@typescript-eslint/no-duplicate-enum-values": "off",
+    "@typescript-eslint/no-unsafe-declaration-merging": "off",
+    "@typescript-eslint/no-base-to-string": "off",
+    "@typescript-eslint/no-duplicate-type-constituents": "off",
+    "@typescript-eslint/no-redundant-type-constituents": "off",
+    "@typescript-eslint/no-unsafe-enum-comparison": "off"
+  }
+}
