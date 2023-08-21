@@ -1,0 +1,41 @@
+# build output
+dist/
+
+# generated types
+.astro/
+
+# dependencies
+node_modules/
+
+# yarn
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# logs
+npm*.log*
+yarn*.log*
+pnpm*.log*
+
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
+.DS_Store
+
+# local env files
+.env*
+!.envrc
+!.env.test
+
+# eslint
+.eslintcache
+
+# misc
+*.pem
+certs/*
+!.gitkeep
