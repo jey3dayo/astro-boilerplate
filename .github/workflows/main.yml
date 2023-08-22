@@ -1,0 +1,54 @@
+name: Build Test
+
+on:
+  pull_request:
+    branches:
+      - main
+      - 'feature/*'
+    paths-ignore:
+      - '**.md'
+  push:
+    branches:
+      - main
+      - 'feature/*'
+    paths-ignore:
+      - '**.md'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: 'package.json'
+
+      - name: Install Yarn v3
+        run: |
+          yarn set version berry
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
+
+      - uses: actions/cache@v3
+        id: cache-yarn
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-cache-folder-${{ hashFiles('**/yarn.lock', '.yarnrc.yml') }}
+
+      - name: List the state of dependencies.
+        if: steps.cache-yarn.outputs.cache-hit != 'true'
+        run: yarn info
+
+      - name: Intall dependencies.
+        run: yarn install
+
+      - name: Test
+        run: yarn test
+
+      - name: Rebuild the .next/ directory
+        run: yarn build

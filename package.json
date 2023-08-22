@@ -19,7 +19,7 @@
     "prettier:check": "prettier --cache --check --ignore-path .prettierignore './**/*.{js,mjs,cjs,jsx,ts,tsx,json,css}'",
     "format": "yarn lint:fix && yarn prettier",
     "type-check": "tsc --noEmit",
-    "depcruise": "depcruise -v .dependency-cruiser.js ./{app,components,config,hooks,lib,prisma,styles}"
+    "depcruise": "depcruise -v .dependency-cruiser.js ./{app,src}"
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.1.0",
