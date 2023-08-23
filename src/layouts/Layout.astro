@@ -4,7 +4,7 @@ import Header from '@/components/Header.astro';
 import '@/styles/globals.css';
 
 interface Props {
-  title: string;
+  title: string | undefined;
 }
 
 const { title } = Astro.props;
