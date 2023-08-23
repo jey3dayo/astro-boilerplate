@@ -1,0 +1,10 @@
+---
+const { url, title, date } = Astro.props;
+---
+
+<li>
+  <a href={url}>
+    {date?.slice(2, 10).replaceAll('-', '/')}
+    {title}
+  </a>
+</li>
