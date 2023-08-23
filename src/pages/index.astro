@@ -1,10 +1,15 @@
 ---
 import Layout from '@/layouts/Layout.astro';
 import Card from '@/components/Card.astro';
+import Footer from '@/components/Footer.astro';
+import Header from '@/components/Header.astro';
+
+const pageTitle = 'ホームページ';
 ---
 
 <Layout title="Hello Astro!">
   <main>
+    <Header />
     <svg
       class="astro-a"
       width="495"
@@ -60,8 +65,10 @@ import Card from '@/components/Card.astro';
         body="Come say hi to our amazing Discord community. ❤️"
       />
     </ul>
-    <a href="/">ホーム</a>
-    <a href="/about/">概要</a>
+
+    <h1>{pageTitle}</h1>
+
+    <Footer />
   </main>
 </Layout>
 
