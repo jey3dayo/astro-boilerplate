@@ -1,16 +1,12 @@
 ---
 import Layout from '@/layouts/Layout.astro';
-import Footer from '@/components/Footer.astro';
-import Header from '@/components/Header.astro';
 
-const pageTitle = 'Hello Astro!';
+const pageTitle = '私について';
 ---
 
 <Layout title={pageTitle}>
   <main>
-    <Header />
-
-    <h1>私について</h1>
+    <h1>{pageTitle}</h1>
     <h2>... そして私の新しいAstroサイトについて！</h2>
 
     <p>
@@ -26,7 +22,6 @@ const pageTitle = 'Hello Astro!';
       <li><a href="/posts/post-2/">記事2</a></li>
       <li><a href="/posts/post-3/">記事3</a></li>
     </ul>
-    <Footer />
   </main>
 </Layout>
 

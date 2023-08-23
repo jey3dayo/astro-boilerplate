@@ -1,15 +1,12 @@
 ---
 import Layout from '@/layouts/Layout.astro';
 import Card from '@/components/Card.astro';
-import Footer from '@/components/Footer.astro';
-import Header from '@/components/Header.astro';
 
 const pageTitle = 'ホームページ';
 ---
 
 <Layout title="Hello Astro!">
   <main>
-    <Header />
     <svg
       class="astro-a"
       width="495"
@@ -38,7 +35,6 @@ const pageTitle = 'ホームページ';
         </linearGradient>
       </defs>
     </svg>
-    <h1>Welcome to <span class="text-gradient">Astro</span></h1>
     <p class="instructions">
       To get started, open the directory <code>src/pages</code> in your project.<br />
       <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
@@ -65,10 +61,6 @@ const pageTitle = 'ホームページ';
         body="Come say hi to our amazing Discord community. ❤️"
       />
     </ul>
-
-    <h1>{pageTitle}</h1>
-
-    <Footer />
   </main>
 </Layout>
 
@@ -90,20 +82,6 @@ const pageTitle = 'ホームページ';
     width: 220px;
     height: auto;
     z-index: -1;
-  }
-  h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    line-height: 1;
-    text-align: center;
-    margin-bottom: 1em;
-  }
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
   }
   .instructions {
     margin-bottom: 2rem;
