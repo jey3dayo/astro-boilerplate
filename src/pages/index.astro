@@ -1,11 +1,14 @@
 ---
 import Layout from '@/layouts/Layout.astro';
 import Card from '@/components/Card.astro';
+import Greeting from '@/components/Greeting.jsx';
 
 const pageTitle = 'ホームページ';
 ---
 
-<Layout title="Hello Astro!">
+<Layout title={pageTitle}>
+  <Greeting client:load messages={['どうも', 'こんにちは', '初めまして', 'ようこそ']} />
+
   <main>
     <svg
       class="astro-a"

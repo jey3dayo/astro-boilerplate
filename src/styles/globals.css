@@ -71,7 +71,6 @@
     @apply border-border;
   }
   body {
-    /* @apply bg-background text-foreground; */
     @apply bg-foreground text-background;
   }
 }
@@ -120,13 +119,17 @@ html {
   text-transform: uppercase;
 }
 
-.nav-links a:hover,
-a:focus {
-  background-color: #ff9776;
-}
-
 .expanded {
   display: unset;
+}
+
+.nav-links a {
+  @apply text-primary-color-10;
+}
+
+.nav-links a:hover,
+a:focus {
+  @apply bg-primary-color-8;
 }
 
 @media screen and (min-width: 636px) {
