@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import preact from '@astrojs/preact';
 import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
 import vercel from '@astrojs/vercel/serverless';
@@ -12,5 +13,6 @@ export default defineConfig({
     tailwind({
       applyBaseStyles: false,
     }),
+    preact(),
   ],
 });
