@@ -121,6 +121,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@astrojs/rss@npm:^2.4.4":
+  version: 2.4.4
+  resolution: "@astrojs/rss@npm:2.4.4"
+  dependencies:
+    fast-xml-parser: ^4.2.5
+    kleur: ^4.1.5
+  checksum: e71b6145a4fcb856a11f826eca3856199d8701d0893cac044bbbaeca53c7dc00c120d9d3b2bb1fd3d24a41bc86a74bad2571e52a9f30d9345091769b58235b4c
+  languageName: node
+  linkType: hard
+
 "@astrojs/tailwind@npm:^4.0.0":
   version: 4.0.0
   resolution: "@astrojs/tailwind@npm:4.0.0"
@@ -3183,6 +3193,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fast-xml-parser@npm:^4.2.5":
+  version: 4.2.7
+  resolution: "fast-xml-parser@npm:4.2.7"
+  dependencies:
+    strnum: ^1.0.5
+  bin:
+    fxparser: src/cli/cli.js
+  checksum: d8b0c9e04756f6c43fa0399428f30149acadae21350e42e26e8fe98e24e6afa6b9b00aa554453795036b00e9fee974a1b556fe2ba18be391d51a9bf1ab790e7c
+  languageName: node
+  linkType: hard
+
 "fastq@npm:^1.6.0":
   version: 1.15.0
   resolution: "fastq@npm:1.15.0"
@@ -4374,7 +4395,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"kleur@npm:^4.0.3, kleur@npm:^4.1.4":
+"kleur@npm:^4.0.3, kleur@npm:^4.1.4, kleur@npm:^4.1.5":
   version: 4.1.5
   resolution: "kleur@npm:4.1.5"
   checksum: 1dc476e32741acf0b1b5b0627ffd0d722e342c1b0da14de3e8ae97821327ca08f9fb944542fb3c126d90ac5f27f9d804edbe7c585bf7d12ef495d115e0f22c12
@@ -6437,6 +6458,7 @@ __metadata:
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
     "@astrojs/react": ^2.3.2
+    "@astrojs/rss": ^2.4.4
     "@astrojs/tailwind": ^4.0.0
     "@astrojs/vercel": ^3.8.2
     "@ianvs/prettier-plugin-sort-imports": ^4.1.0
@@ -6978,6 +7000,13 @@ __metadata:
   version: 3.1.1
   resolution: "strip-json-comments@npm:3.1.1"
   checksum: 492f73e27268f9b1c122733f28ecb0e7e8d8a531a6662efbd08e22cccb3f9475e90a1b82cab06a392f6afae6d2de636f977e231296400d0ec5304ba70f166443
+  languageName: node
+  linkType: hard
+
+"strnum@npm:^1.0.5":
+  version: 1.0.5
+  resolution: "strnum@npm:1.0.5"
+  checksum: 651b2031db5da1bf4a77fdd2f116a8ac8055157c5420f5569f64879133825915ad461513e7202a16d7fec63c54fd822410d0962f8ca12385c4334891b9ae6dd2
   languageName: node
   linkType: hard
 
